@@ -20,7 +20,7 @@ src/
 
 ## React/Vue parity
 
-Framework-agnostic adapters (`date-*`, `i18n-dictionary`, `rich-text-tiptap`) and their tests exist in both folders. Any change must land in both copies in the same PR. `npm run check:parity` compares the pairs (ignoring the file-header JSDoc) and runs in CI.
+Framework-agnostic adapters (`date-*`, `i18n-dictionary`, `rich-text-tiptap`) and their tests exist in both folders. Any change must land in both copies in the same PR. `npm run check:parity` compares the pairs (ignoring the file-header JSDoc and the `@/react/` vs `@/vue/` import segment) and runs in CI.
 
 New adapters ship under both `react/` and `vue/` unless the underlying library is framework-specific (e.g. `i18n-vue-i18n`).
 
@@ -36,12 +36,12 @@ import { get } from "es-toolkit/compat";
 import type { IconAdapter } from "@bridge-ui/core/Adapters";
 
 // ** Local Imports
-import { createLucideIconAdapter } from "../icon-lucide";
+import { createLucideIconAdapter } from "@/react/icon-lucide";
 ```
 
 - **External**: npm packages (`es-toolkit`, `dayjs`, `vitest`, …).
 - **Core**: `@bridge-ui/core/*` subpaths — never the `@bridge-ui/core` barrel.
-- **Local**: relative paths. Tests import the adapter via `../<name>` so react/vue test copies stay identical.
+- **Local**: always the `@/` alias (→ `src/`), never relative paths. Tests import the adapter via `@/react/<name>` or `@/vue/<name>`.
 - Omit empty groups; one blank line between groups; order within a group with Prettier.
 
 ## Tailwind

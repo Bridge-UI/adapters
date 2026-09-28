@@ -18,6 +18,17 @@ export default defineConfig(
     },
     rules: {
       "@typescript-eslint/no-empty-object-type": "off",
+      "no-restricted-imports": [
+        "error",
+        {
+          patterns: [
+            {
+              group: ["./*", "../*"],
+              message: "Use the `@/` alias instead of relative imports.",
+            },
+          ],
+        },
+      ],
       "perfectionist/sort-interfaces": [
         "error",
         {

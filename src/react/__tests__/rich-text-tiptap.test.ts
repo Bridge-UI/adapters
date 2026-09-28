@@ -3,7 +3,7 @@ import { isPlainObject } from "es-toolkit/compat";
 import { afterEach, describe, expect, test } from "vitest";
 
 // ** Local Imports
-import { createTiptapRichTextAdapter } from "../rich-text-tiptap";
+import { createTiptapRichTextAdapter } from "@/react/rich-text-tiptap";
 
 describe("createTiptapRichTextAdapter", () => {
   let host: HTMLDivElement;

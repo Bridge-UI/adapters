@@ -7,7 +7,10 @@ import { expect, test } from "vitest";
 import { SEMANTIC_ICON_NAMES } from "@bridge-ui/core/Adapters";
 
 // ** Local Imports
-import { createFontAwesomeIconAdapter, wrapFaIcon } from "../icon-fontawesome";
+import {
+  createFontAwesomeIconAdapter,
+  wrapFaIcon,
+} from "@/vue/icon-fontawesome";
 
 test("it should resolve every semantic icon name", () => {
   const adapter = createFontAwesomeIconAdapter();

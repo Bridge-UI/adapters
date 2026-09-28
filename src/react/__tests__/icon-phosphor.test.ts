@@ -5,7 +5,7 @@ import { expect, test } from "vitest";
 import { SEMANTIC_ICON_NAMES } from "@bridge-ui/core/Adapters";
 
 // ** Local Imports
-import { createPhosphorIconAdapter } from "../icon-phosphor";
+import { createPhosphorIconAdapter } from "@/react/icon-phosphor";
 
 test("it should resolve every semantic icon name", () => {
   const adapter = createPhosphorIconAdapter();

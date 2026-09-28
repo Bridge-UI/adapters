@@ -2,7 +2,7 @@
 import { expect, test } from "vitest";
 
 // ** Local Imports
-import { createDateFnsDateAdapter } from "../date-date-fns";
+import { createDateFnsDateAdapter } from "@/vue/date-date-fns";
 
 const adapter = createDateFnsDateAdapter();
 

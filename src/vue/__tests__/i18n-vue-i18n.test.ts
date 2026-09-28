@@ -3,7 +3,7 @@ import { expect, test } from "vitest";
 import { createI18n } from "vue-i18n";
 
 // ** Local Imports
-import { createVueI18nAdapter } from "../i18n-vue-i18n";
+import { createVueI18nAdapter } from "@/vue/i18n-vue-i18n";
 
 test("it should forward messages to vue-i18n", () => {
   const vueI18n = createI18n({

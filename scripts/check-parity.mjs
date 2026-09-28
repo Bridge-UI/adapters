@@ -26,8 +26,18 @@ function withoutHeader(source) {
   return source.replace(/^\/\*\*[\s\S]*?\*\/\s*/, "");
 }
 
+/**
+ * Collapses `@/react/` and `@/vue/` alias imports so each copy can import its
+ * own framework folder.
+ */
+function withoutFrameworkAlias(source) {
+  return source.replace(/(["'])@\/(?:react|vue)\//g, "$1@/<framework>/");
+}
+
 function read(framework, file) {
-  return withoutHeader(readFileSync(join(srcDir, framework, file), "utf8"));
+  const source = readFileSync(join(srcDir, framework, file), "utf8");
+
+  return withoutFrameworkAlias(withoutHeader(source));
 }
 
 const pairs = agnosticAdapters.map((name) => `${name}.ts`);

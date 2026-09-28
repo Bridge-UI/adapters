@@ -7,7 +7,7 @@ import { expect, test, vi } from "vitest";
 import { copyDateWallClock } from "@bridge-ui/core/Domain";
 
 // ** Local Imports
-import { createMomentDateAdapter } from "../date-moment";
+import { createMomentDateAdapter } from "@/react/date-moment";
 
 const adapter = createMomentDateAdapter();
 

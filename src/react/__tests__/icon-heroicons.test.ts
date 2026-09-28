@@ -5,7 +5,7 @@ import { expect, test } from "vitest";
 import { SEMANTIC_ICON_NAMES } from "@bridge-ui/core/Adapters";
 
 // ** Local Imports
-import { createHeroiconsIconAdapter } from "../icon-heroicons";
+import { createHeroiconsIconAdapter } from "@/react/icon-heroicons";
 
 test("it should resolve every semantic icon name", () => {
   const adapter = createHeroiconsIconAdapter();

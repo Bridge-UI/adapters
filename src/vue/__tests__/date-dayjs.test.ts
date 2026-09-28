@@ -8,7 +8,7 @@ import { expect, test, vi } from "vitest";
 import { copyDateWallClock } from "@bridge-ui/core/Domain";
 
 // ** Local Imports
-import { createDayjsDateAdapter } from "../date-dayjs";
+import { createDayjsDateAdapter } from "@/vue/date-dayjs";
 
 dayjs.extend(utc);
 dayjs.extend(timezone);

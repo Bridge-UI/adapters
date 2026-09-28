@@ -2,7 +2,7 @@
 import { expect, test } from "vitest";
 
 // ** Local Imports
-import { createDictionaryI18nAdapter } from "../i18n-dictionary";
+import { createDictionaryI18nAdapter } from "@/react/i18n-dictionary";
 
 test("it should translate dictionary messages after setLocale", () => {
   const adapter = createDictionaryI18nAdapter();

@@ -5,7 +5,7 @@ import { expect, test } from "vitest";
 import { SEMANTIC_ICON_NAMES } from "@bridge-ui/core/Adapters";
 
 // ** Local Imports
-import { createLucideIconAdapter } from "../icon-lucide";
+import { createLucideIconAdapter } from "@/vue/icon-lucide";
 
 test("it should resolve every semantic icon name", () => {
   const adapter = createLucideIconAdapter();

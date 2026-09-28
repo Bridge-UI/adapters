@@ -3,7 +3,7 @@ import i18n from "i18next";
 import { expect, test, vi } from "vitest";
 
 // ** Local Imports
-import { createI18nextAdapter } from "../i18n-i18next";
+import { createI18nextAdapter } from "@/react/i18n-i18next";
 
 test("it should forward messages to i18next", async () => {
   await i18n.init({

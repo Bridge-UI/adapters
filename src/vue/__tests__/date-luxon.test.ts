@@ -5,7 +5,7 @@ import { expect, test } from "vitest";
 import { copyDateWallClock } from "@bridge-ui/core/Domain";
 
 // ** Local Imports
-import { createLuxonDateAdapter } from "../date-luxon";
+import { createLuxonDateAdapter } from "@/vue/date-luxon";
 
 const adapter = createLuxonDateAdapter();
 

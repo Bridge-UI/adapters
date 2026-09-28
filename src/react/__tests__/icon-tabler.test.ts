@@ -5,7 +5,7 @@ import { expect, test } from "vitest";
 import { SEMANTIC_ICON_NAMES } from "@bridge-ui/core/Adapters";
 
 // ** Local Imports
-import { createTablerIconAdapter } from "../icon-tabler";
+import { createTablerIconAdapter } from "@/react/icon-tabler";
 
 test("it should resolve every semantic icon name", () => {
   const adapter = createTablerIconAdapter();

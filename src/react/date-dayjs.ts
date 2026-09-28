@@ -8,7 +8,7 @@
 
 // ** External Imports
 import dayjs, { type Dayjs } from "dayjs";
-import customParseFormat from "dayjs/plugin/customParseFormat";
+import customParseFormat from "dayjs/plugin/customParseFormat.js";
 import { clamp, isNil, isString, range } from "es-toolkit/compat";
 
 // ** Core Imports

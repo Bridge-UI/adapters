@@ -34,8 +34,8 @@ import { BridgeUIProvider } from "@bridge-ui/react";
 
 <BridgeUIProvider
   global={{
-    icons: createLucideIconAdapter(),
     dates: createDayjsDateAdapter(),
+    icons: createLucideIconAdapter(),
   }}
 >
   <App />
@@ -52,8 +52,8 @@ import { createBridgeUI } from "@bridge-ui/vue";
 app.use(
   createBridgeUI({
     global: {
-      icons: createLucideIconAdapter(),
       dates: createDayjsDateAdapter(),
+      icons: createLucideIconAdapter(),
     },
   }),
 );

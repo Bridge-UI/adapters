@@ -61,20 +61,20 @@ app.use(
 
 ### 🧩 Adapters
 
-| Adapter            | Factory                        | `react/` peers                                               | `vue/` peers                          |
-| ------------------ | ------------------------------ | ------------------------------------------------------------ | ------------------------------------- |
-| `date-date-fns`    | `createDateFnsDateAdapter`     | `date-fns`                                                   | `date-fns`                            |
-| `date-dayjs`       | `createDayjsDateAdapter`       | `dayjs`                                                      | `dayjs`                               |
-| `date-luxon`       | `createLuxonDateAdapter`       | `luxon`                                                      | `luxon`                               |
-| `date-moment`      | `createMomentDateAdapter`      | `moment` (+ `moment-timezone`)                               | `moment` (+ `moment-timezone`)        |
-| `i18n-dictionary`  | `createDictionaryI18nAdapter`  | —                                                            | —                                     |
-| `i18n-i18next`     | `createI18nextAdapter`         | `i18next`                                                    | —                                     |
-| `i18n-vue-i18n`    | `createVueI18nAdapter`         | —                                                            | `vue-i18n`                            |
-| `icon-lucide`      | `createLucideIconAdapter`      | `lucide-react`                                               | `@lucide/vue`                         |
-| `icon-heroicons`   | `createHeroiconsIconAdapter`   | `@heroicons/react`                                           | `@heroicons/vue`                      |
-| `icon-tabler`      | `createTablerIconAdapter`      | `@tabler/icons-react`                                        | `@tabler/icons-vue`                   |
-| `icon-phosphor`    | `createPhosphorIconAdapter`    | `@phosphor-icons/react`                                      | `@phosphor-icons/vue`                 |
-| `icon-fontawesome` | `createFontAwesomeIconAdapter` | `@fortawesome/react-fontawesome` + core                      | `@fortawesome/vue-fontawesome` + core |
+| Adapter            | Factory                        | `react/` peers                          | `vue/` peers                          |
+| ------------------ | ------------------------------ | --------------------------------------- | ------------------------------------- |
+| `date-date-fns`    | `createDateFnsDateAdapter`     | `date-fns`                              | `date-fns`                            |
+| `date-dayjs`       | `createDayjsDateAdapter`       | `dayjs`                                 | `dayjs`                               |
+| `date-luxon`       | `createLuxonDateAdapter`       | `luxon`                                 | `luxon`                               |
+| `date-moment`      | `createMomentDateAdapter`      | `moment` (+ `moment-timezone`)          | `moment` (+ `moment-timezone`)        |
+| `i18n-dictionary`  | `createDictionaryI18nAdapter`  | —                                       | —                                     |
+| `i18n-i18next`     | `createI18nextAdapter`         | `i18next`                               | —                                     |
+| `i18n-vue-i18n`    | `createVueI18nAdapter`         | —                                       | `vue-i18n`                            |
+| `icon-lucide`      | `createLucideIconAdapter`      | `lucide-react`                          | `@lucide/vue`                         |
+| `icon-heroicons`   | `createHeroiconsIconAdapter`   | `@heroicons/react`                      | `@heroicons/vue`                      |
+| `icon-tabler`      | `createTablerIconAdapter`      | `@tabler/icons-react`                   | `@tabler/icons-vue`                   |
+| `icon-phosphor`    | `createPhosphorIconAdapter`    | `@phosphor-icons/react`                 | `@phosphor-icons/vue`                 |
+| `icon-fontawesome` | `createFontAwesomeIconAdapter` | `@fortawesome/react-fontawesome` + core | `@fortawesome/vue-fontawesome` + core |
 
 Font Awesome also needs `@fortawesome/fontawesome-svg-core` and `@fortawesome/free-solid-svg-icons`.
 

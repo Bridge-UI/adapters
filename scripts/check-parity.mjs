@@ -12,7 +12,6 @@ const agnosticAdapters = [
   "date-luxon",
   "date-moment",
   "i18n-dictionary",
-  "rich-text-tiptap",
 ];
 
 /** Tests that legitimately differ between `react/` and `vue/`. */

@@ -13,14 +13,14 @@ src/
 ```
 
 - Every adapter lives under `react/` **and/or** `vue/`, including framework-agnostic ones. There is no root export.
-- File names are kebab-case `{kind}-{lib}` (`date-dayjs`, `icon-lucide`, `rich-text-tiptap`). Each file is its own build entry and public subpath.
+- File names are kebab-case `{kind}-{lib}` (`date-dayjs`, `icon-lucide`). Each file is its own build entry and public subpath.
 - No JSX or `.vue` SFCs: React adapters use `createElement`, Vue adapters use `h` / `defineComponent`.
 - Depend only on `@bridge-ui/core` (peer) and `es-toolkit`. Never import from `@bridge-ui/react` or `@bridge-ui/vue`.
 - Every third-party library is an **optional** peer in `package.json` (`peerDependencies` + `peerDependenciesMeta`) and a devDependency for tests.
 
 ## React/Vue parity
 
-Framework-agnostic adapters (`date-*`, `i18n-dictionary`, `rich-text-tiptap`) and their tests exist in both folders. Any change must land in both copies in the same PR. `npm run check:parity` compares the pairs (ignoring the file-header JSDoc and the `@/react/` vs `@/vue/` import segment) and runs in CI.
+Framework-agnostic adapters (`date-*`, `i18n-dictionary`) and their tests exist in both folders. Any change must land in both copies in the same PR. `npm run check:parity` compares the pairs (ignoring the file-header JSDoc and the `@/react/` vs `@/vue/` import segment) and runs in CI.
 
 New adapters ship under both `react/` and `vue/` unless the underlying library is framework-specific (e.g. `i18n-vue-i18n`).
 
@@ -46,7 +46,7 @@ import { createLucideIconAdapter } from "@/react/icon-lucide";
 
 ## Tailwind
 
-Adapters must not rely on consumers scanning this package with `@source`. Emit a named `bridge-*` class and style it in the `theme.css` of `@bridge-ui/react` / `@bridge-ui/vue` (e.g. `bridge-rich-text-editable`).
+Adapters must not rely on consumers scanning this package with `@source`. Emit a named `bridge-*` class and style it in the `theme.css` of `@bridge-ui/react` / `@bridge-ui/vue`.
 
 ## Code style
 

@@ -11,7 +11,7 @@
 
 ### 🚀 Introduction
 
-`@bridge-ui/adapters` ships ready-made **date**, **icon**, **i18n**, and **rich-text** adapters for [`@bridge-ui/react`](https://www.npmjs.com/package/@bridge-ui/react) and [`@bridge-ui/vue`](https://www.npmjs.com/package/@bridge-ui/vue). Adapters implement the contracts from `@bridge-ui/core/Adapters` and are wired through `BridgeUIProvider` (React) or `createBridgeUI` (Vue) `global.*`.
+`@bridge-ui/adapters` ships ready-made **date**, **icon**, and **i18n** adapters for [`@bridge-ui/react`](https://www.npmjs.com/package/@bridge-ui/react) and [`@bridge-ui/vue`](https://www.npmjs.com/package/@bridge-ui/vue). Adapters implement the contracts from `@bridge-ui/core/Adapters` and are wired through `BridgeUIProvider` (React) or `createBridgeUI` (Vue) `global.*`.
 
 Every adapter lives under a `react/` or `vue/` subpath — including framework-agnostic ones — so imports always follow `@bridge-ui/adapters/{react,vue}/<name>`.
 
@@ -21,7 +21,7 @@ Every adapter lives under a `react/` or `vue/` subpath — including framework-a
 npm install @bridge-ui/adapters
 ```
 
-Then install the optional peer of each adapter you use (e.g. `dayjs`, `lucide-react`, `@tiptap/*`). Only `@bridge-ui/core` is a required peer; it is already installed with `@bridge-ui/react` / `@bridge-ui/vue`.
+Then install the optional peer of each adapter you use (e.g. `dayjs`, `lucide-react`). Only `@bridge-ui/core` is a required peer; it is already installed with `@bridge-ui/react` / `@bridge-ui/vue`.
 
 ### 🔌 Usage
 
@@ -75,13 +75,12 @@ app.use(
 | `icon-tabler`      | `createTablerIconAdapter`      | `@tabler/icons-react`                                        | `@tabler/icons-vue`                   |
 | `icon-phosphor`    | `createPhosphorIconAdapter`    | `@phosphor-icons/react`                                      | `@phosphor-icons/vue`                 |
 | `icon-fontawesome` | `createFontAwesomeIconAdapter` | `@fortawesome/react-fontawesome` + core                      | `@fortawesome/vue-fontawesome` + core |
-| `rich-text-tiptap` | `createTiptapRichTextAdapter`  | `@tiptap/core`, `pm`, `starter-kit`, `extension-placeholder` | same                                  |
 
 Font Awesome also needs `@fortawesome/fontawesome-svg-core` and `@fortawesome/free-solid-svg-icons`.
 
 ### 🎨 Tailwind
 
-No extra `@source` is needed. `rich-text-tiptap` only emits the `bridge-rich-text-editable` class, which is styled by the `theme.css` of `@bridge-ui/react` / `@bridge-ui/vue`.
+No extra `@source` is needed. Adapter classes are named `bridge-*` utilities styled by the `theme.css` of `@bridge-ui/react` / `@bridge-ui/vue`.
 
 ### 🔁 Migrating from `Adapters/Examples`
 
@@ -92,7 +91,7 @@ Adapters used to ship as `@bridge-ui/{react,vue}/Adapters/Examples/*`. Swap the 
 | `@bridge-ui/react/Adapters/Examples/<name>` | `@bridge-ui/adapters/react/<name>` |
 | `@bridge-ui/vue/Adapters/Examples/<name>`   | `@bridge-ui/adapters/vue/<name>`   |
 
-Move the adapter peers (date libs, icon sets, i18n, Tiptap) to your app dependencies if they were only installed for the old subpaths.
+Move the adapter peers (date libs, icon sets, i18n) to your app dependencies if they were only installed for the old subpaths.
 
 ### 🔧 Contributing
 
@@ -105,7 +104,7 @@ npm run type-check
 npm run check:parity
 ```
 
-Framework-agnostic adapters (`date-*`, `i18n-dictionary`, `rich-text-tiptap`) and their tests exist in both `src/react/` and `src/vue/`. Change both copies in the same PR — `npm run check:parity` fails when they drift. See [`AGENTS.md`](./AGENTS.md) for code conventions.
+Framework-agnostic adapters (`date-*`, `i18n-dictionary`) and their tests exist in both `src/react/` and `src/vue/`. Change both copies in the same PR — `npm run check:parity` fails when they drift. See [`AGENTS.md`](./AGENTS.md) for code conventions.
 
 ### 📝 License
 

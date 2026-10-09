@@ -1,3 +1,4 @@
 dist
+.fleet
 coverage
 node_modules

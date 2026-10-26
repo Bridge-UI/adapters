@@ -2,7 +2,8 @@
  * vue-i18n adapter. Wire via `BridgeUIProvider` / `createBridgeUI` `global.i18n`.
  * Requires the optional `vue-i18n` peer.
  *
- * Passes Bridge source strings, `count`, and `params` to `i18n.t`.
+ * Passes Bridge source strings, `params`, and `count` to `i18n.t`, as in
+ * `t(key, named, plural)`.
  * Pass `vueI18n.global` (composition mode) or the result of `useI18n()`.
  */
 
@@ -35,7 +36,7 @@ export function createVueI18nAdapter(i18n: VueI18nComposer): I18nAdapter {
         return params ? i18n.t(message, params) : i18n.t(message);
       }
 
-      return params ? i18n.t(message, count, params) : i18n.t(message, count);
+      return params ? i18n.t(message, params, count) : i18n.t(message, count);
     },
   };
 }

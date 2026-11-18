@@ -67,4 +67,11 @@ npm run format:check
 
 ## Release
 
-Independent semver. Bump `version` in `package.json`, merge to `main`, then publish a GitHub release with tag `v<version>`. The `release.yml` workflow verifies the version, builds, tests, and publishes via npm Trusted Publishing (repository `adapters`, workflow `release.yml`).
+Independent semver. Bump `version` in `package.json`, merge to `main`, then publish a GitHub release with tag `v<version>`. The `release.yml` workflow has two jobs: **build** (version check, parity, build, tests, `npm pack`; no publish rights) and **publish** (environment `npm`, waits for a maintainer approval, then publishes the packed tarball via npm Trusted Publishing with provenance). Trusted Publisher on npm: repository `adapters`, workflow `release.yml`, environment `npm`.
+
+## Supply chain
+
+- `.npmrc` sets `ignore-scripts=true`; dependency install scripts never run.
+- Actions are pinned by commit SHA; Dependabot bumps them and npm dependencies after a 7-day cooldown.
+- `npm run check:supply-chain`: lockfile only from `registry.npmjs.org`, docs only install known packages, `npm audit signatures`.
+- Pull requests run dependency review; workflow changes are audited by zizmor. See [SECURITY.md](SECURITY.md).

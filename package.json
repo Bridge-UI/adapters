@@ -49,7 +49,8 @@
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
     "format": "prettier . --write",
-    "format:check": "prettier . --check"
+    "format:check": "prettier . --check",
+    "check:supply-chain": "node scripts/check-lockfile.mjs && node scripts/check-install-commands.mjs && npm audit signatures"
   },
   "dependencies": {
     "es-toolkit": "^1.52.0"

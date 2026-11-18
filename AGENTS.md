@@ -67,7 +67,7 @@ npm run format:check
 
 ## Release
 
-Independent semver. Bump `version` in `package.json`, merge to `main`, then publish a GitHub release with tag `v<version>`. The `release.yml` workflow has two jobs: **build** (version check, parity, build, tests, `npm pack`; no publish rights) and **publish** (environment `npm`, waits for a maintainer approval, then publishes the packed tarball via npm Trusted Publishing with provenance). Trusted Publisher on npm: repository `adapters`, workflow `release.yml`, environment `npm`.
+Independent semver. Bump `version` in `package.json`, merge to `main`, then publish a GitHub release with tag `v<version>`. The `release.yml` workflow has two jobs: **build** (version check, parity, build, tests, `npm pack`; no publish rights) and **publish** (publishes the packed tarball via npm Trusted Publishing with provenance). Trusted Publisher on npm: repository `adapters`, workflow `release.yml`.
 
 ## Supply chain
 
